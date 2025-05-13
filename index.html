@@ -1,1 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Napos – Big Trip</title>
+  <link href="https://fonts.googleapis.com/css2?family=Merriweather&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Merriweather', serif;
+      background: url('images/bg.jpg') center/cover no-repeat fixed;
+      color: #fff;
+    }
+
+    .overlay {
+      background-color: rgba(0, 0, 0, 0.6);
+      padding: 4rem 2rem;
+      min-height: 100vh;
+    }
+
+    h1 {
+      text-align: center;
+      font-size: 3rem;
+      margin-bottom: 2rem;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 2rem;
+      max-width: 1000px;
+      margin: 0 auto;
+    }
+
+    .destination {
+      position: relative;
+      border-radius: 12px;
+      overflow: hidden;
+      cursor: pointer;
+      transition: transform 0.3s;
+    }
+
+    .destination:hover {
+      transform: scale(1.03);
+    }
+
+    .destination img {
+      width: 100%;
+      height: 250px;
+      object-fit: cover;
+      display: block;
+    }
+
+    .destination .label {
+      position: absolute;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      background-color: rgba(255,255,255,0.5);
+      color: #2f4f4f;
+      font-size: 1.6rem;
+      font-weight: bold;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      opacity: 0;
+      transition: opacity 0.3s;
+    }
+
+    .destination:hover .label {
+      opacity: 1;
+    }
+
+    a {
+      text-decoration: none;
+    }
+  </style>
+</head>
+<body>
+  <div class="overlay">
+    <h1>🌍 הטיול הגדול של נאפוס</h1>
+    <div class="grid">
+      <a href="sri-lanka.html">
+        <div class="destination">
+          <img src="images/ella.jpg" alt="Sri Lanka">
+          <div class="label">🇱🇰 סרי לנקה</div>
+        </div>
+      </a>
+      <a href="#">
+        <div class="destination">
+          <img src="images/vietnam.jpg" alt="Vietnam">
+          <div class="label">🇻🇳 ויאטנם</div>
+        </div>
+      </a>
+      <a href="#">
+        <div class="destination">
+          <img src="images/philippines.jpg" alt="Philippines">
+          <div class="label">🇵🇭 פיליפינים</div>
+        </div>
+      </a>
+    </div>
+  </div>
+</body>
+</html>
 
